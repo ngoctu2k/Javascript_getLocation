@@ -22,11 +22,11 @@
     }
 
     function showPosition(position) {
-      // x.innerHTML =
-      //   "Latitude: " +
-      //   position.coords.latitude +
-      //   "<br>Longitude: " +
-      //   position.coords.longitude;
+      x.innerHTML =
+        "Latitude: " +
+        position.coords.latitude +
+        "<br>Longitude: " +
+        position.coords.longitude;
        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
         .then((response) => response.json())
         .then((data) => {
